@@ -30,6 +30,10 @@ _A two player game in which a player rolls a single die repeatedly until either 
 Describe: Player()
 Test: Store new player object within Player Constructor.
 Expect: (let player1 = new Player()).toEqual(Player{playerNum:,turnScore:,totalScore:,status:})
+
+Describe: rollDice()
+Test: Get random number between 1 and 6.
+Expect: (rollDice()).toEqual(1, 2, 3, 4, 5, or 6)
 ```
 
 ## License

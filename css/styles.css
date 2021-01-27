@@ -1,4 +1,8 @@
 .jumbotron {
   background-image: linear-gradient(blue, purple);
-  color: greenyellow;
+  color: rgb(62, 255, 62);
+  text-align: center;
+}
+body {
+  background-image: linear-gradient(pink, yellow);
 }
