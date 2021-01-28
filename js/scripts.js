@@ -79,8 +79,3 @@ $(document).ready(function(){
   });
   $("#roll-player2").click(function(){
     player2.rollDice();
-    $("#dice-roll").text(player2.currentRoll);
-    player2.theTurnScore();
-    $(".p2-score").text(player2.currentTurnScore);
-  });
-});
