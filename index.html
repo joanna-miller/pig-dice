@@ -13,43 +13,40 @@
       <h1 class="display-4">Pig Dice!!!</h1>
       <p class="lead">Welcome to Pig Dice!!!</p>
       <hr class="my-4">
-      <p>A super fun game, with dice!!! no pigs though go f*** yourself!!!</p>
+      <p>A super fun game, with dice!!! no pigs though hehe, lol!!</p>
       <a class="btn btn-primary btn-lg" href="#" role="button" id="play">Play!</a>
     </div>
     <div class="container">
 
-      
-      
-      
-      <div class="player1">
-        <h1>Player 1, It's your turn!</h1>
-        <P>Current turn score: <span class="p1-score"></span></P>
+      <div id="game-grid">
+        <div class="players">
+          <div class="player1">
+            <h3>Player 1, It's your turn!</h3>
+            <p>Current turn score: <span class="p1-score"></span></p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="roll-player1">ROLL!</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="pass-player1">PASS!</a>
+          </div>
+          <div class="player2">
+            <h3>Player 2, It's your turn!</h3>
+            <P>Current turn score: <span class="p2-score"></span></P>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="roll-player2">ROLL!</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button" id="pass-player2">PASS!</a>
+          </div>
+        </div>  
+        <div class="dice-roll">
+          <h1 id="dice-roll">Dice Roll:</h1>
+        </div>
+        <div class="scoreboard">
+          <h3>Scoreboard</h3>
+          <p>Player1 total score: <span class="p1-total"></span></p>
 
-        <p>Total score: <span class="p1-total"></span></p>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="roll-player1">ROLL!</a>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="pass-player1">PASS!</a>
-      </div>
-      <div class="player2">
-        <h1>Player 2, It's your turn!</h1>
-        <P>Current turn score: <span class="p2-score"></span></P>
+          <p>Player2 total score: <span class="p2-total"></span></p>
+        </div>
+      </div>  
+      <div class="loser">
+        <h2>Look at you Player 1. It's pathetic. You're a bad pig! BAD PIG!!!</h2>
 
-        <p>Total score: <span class="p2-total"></span></p>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="roll-player2">ROLL!</a>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="pass-player2">PASS!</a>
       </div>
-      
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     </div>
   </body>
 </html>

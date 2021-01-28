@@ -1,6 +1,6 @@
 .jumbotron {
-  background-image: linear-gradient(35deg,blue, rgb(104, 253, 104), purple);
-  color: rgb(62, 255, 62);
+  background-image: linear-gradient(35deg,blue, rgb(104, 253, 104), rgb(250, 7, 250));
+  color: rgb(56, 7, 190);
   text-align: center;
 }
 body {
@@ -10,10 +10,49 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 180px;
   height: auto;
 }
 
-.player1, .player2{
-  display:none;
+.player1, .player2 {
+  /* display: none; */
+
+}
+
+#game-grid {
+  display: grid;
+  grid-template-columns: 35% 30% 35%
+}
+
+.players {
+  background-image: linear-gradient(rgb(38, 246, 38), cyan);
+  margin-right: 10%;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px 0 rgb(251, 255, 0);
+  /* display: none; */
+}
+
+.dice-roll {
+  background-image: linear-gradient(rgb(192, 6, 192), red);
+  border-radius: 50%;
+  padding-top: 41%;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 20px 0 rgb(43, 255, 0);
+  /* display: none; */
+  text-align: center;
+  padding-bottom: 41%;
+}
+
+.scoreboard {
+  background-image: linear-gradient(cyan, rgb(13, 255, 13));
+  margin-left: 10%;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 20px 0 rgb(0, 89, 255);
+  /* display: none; */
+}
+.loser {
+  display: none;
 }

@@ -1,19 +1,27 @@
 // Business Logic
-function Player(playerNum, turnScore, totalScore, status) {
+function Player(playerNum, currentRoll, currentTurnScore, turnScore, totalScore, status) {
 this.playerNum = playerNum;
+this.currentRoll = currentRoll;
+this.currentTurnScore = currentTurnScore;
 this.turnScore = turnScore;
 this.totalScore = totalScore;
 this.status = status;
 }
-let player1 = new Player(1, [], 0, false);
-let player2 = new Player(2, [], 0, false);
-// generate random "dice roll" number from 1-6
+let player1 = new Player(1, 0, 0, [], 0, false);
+let player2 = new Player(2, 0, 0, [], 0, false);
 
 let rollsArray = [];
+
 Player.prototype.rollDice = function() {
-  let rollValue = Math.floor(Math.random() * 6) + 1
+  let rollValue = Math.floor(Math.random() * 6) + 1;
   console.log(rollValue);
-  rollsArray.push(rollValue);
+  if (rollValue > 1) {
+    rollsArray.push(rollValue);
+    this.currentRoll = rollValue;
+  } else {
+    this.currentRoll = rollValue;
+    this.endTurn();
+  }
 };
 Player.prototype.endTurn = function() {
   let sum = 0;
@@ -24,27 +32,55 @@ Player.prototype.endTurn = function() {
     });  
   this.turnScore.push(sum);
   rollsArray = [];
+  this.currentTurnScore = 0;
 };
-// user logic//
+Player.prototype.theScore = function() {
+  let sum = 0;
+  this.turnScore.forEach(function(element) {
+    sum += element;
+  });
+  this.totalScore = sum;
+};
+Player.prototype.theTurnScore = function() {
+  let sum = 0;
+  rollsArray.forEach(function(element) {
+    sum += element;
+  });
+  this.currentTurnScore = sum;
+}
+// User Interface Logic
 $(document).ready(function(){
   $("#play").click(function(){
     $(".player1").show();
     $("#play").hide();
+    $(".players").show();
+    $(".dice-roll").show();
+    $(".scoreboard").show();
   });
   $("#pass-player1").click(function(){
     player1.endTurn();
+    player1.theScore();
     $(".player2").show();
     $(".player1").slideUp();
+    $(".p1-total").text(player1.totalScore);
     });
   $("#pass-player2").click(function(){
     player2.endTurn();
+    player2.theScore();
     $(".player1").show();
-    $(".player2").slideUp();  
+    $(".player2").slideUp(); 
+    $(".p2-total").text(player2.totalScore); 
   });
   $("#roll-player1").click(function(){
     player1.rollDice();
+    $("#dice-roll").text(player1.currentRoll);
+    player1.theTurnScore();
+    $(".p1-score").text(player1.currentTurnScore);
   });
   $("#roll-player2").click(function(){
     player2.rollDice();
+    $("#dice-roll").text(player2.currentRoll);
+    player2.theTurnScore();
+    $(".p2-score").text(player2.currentTurnScore);
   });
 });
