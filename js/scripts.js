@@ -14,12 +14,9 @@ let rollsArray = [];
 
 Player.prototype.rollDice = function() {
   let rollValue = Math.floor(Math.random() * 6) + 1;
-  console.log(rollValue);
-  if (rollValue > 1) {
-    rollsArray.push(rollValue);
-    this.currentRoll = rollValue;
-  } else {
-    this.currentRoll = rollValue;
+  rollsArray.push(rollValue);
+  this.currentRoll = rollValue;
+  if (rollValue === 1) {  
     this.endTurn();
   }
 };
@@ -63,19 +60,39 @@ $(document).ready(function(){
     $(".player2").show();
     $(".player1").slideUp();
     $(".p1-total").text(player1.totalScore);
+    $("#roll-player2").show();
+    $(".p1-score").text(player1.currentTurnScore);
     });
+
   $("#pass-player2").click(function(){
     player2.endTurn();
     player2.theScore();
     $(".player1").show();
     $(".player2").slideUp(); 
     $(".p2-total").text(player2.totalScore); 
+    $("#roll-player1").show();
+    $(".p2-score").text(player2.currentTurnScore);
   });
+
   $("#roll-player1").click(function(){
     player1.rollDice();
     $("#dice-roll").text(player1.currentRoll);
+    if (player1.currentRoll === 1) {
+      player1.currentTurnScore = 0;
+      $("#roll-player1").hide();
+    }
     player1.theTurnScore();
     $(".p1-score").text(player1.currentTurnScore);
   });
+
   $("#roll-player2").click(function(){
     player2.rollDice();
+    if (player2.currentRoll === 1) {
+      player2.currentTurnScore = 0;
+      $("#roll-player2").hide();
+    }
+    $("#dice-roll").text(player2.currentRoll);
+    player2.theTurnScore();
+    $(".p2-score").text(player2.currentTurnScore);
+  });
+});
