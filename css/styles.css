@@ -13,6 +13,7 @@ body {
   margin-right: auto;
   width: 180px;
   height: auto;
+  blox-shadow: 12px 12px 2px 1px rgb(198, 198, 255);
 }
 
 .player1, .player2 {
