@@ -30,3 +30,24 @@ function endTurn(player) {
   player.turnScore.push(sum);
   rollsArray = [];
 };
+
+
+
+// user logic//
+$(document).ready(function(){
+
+  $("#play").click(function(){
+    $(".player1").show();
+    $("#play").hide();
+  });
+
+  $("#pass-player1").click(function(){
+    $(".player2").show();
+    $(".player1").slideUp();
+    });
+
+  $("#pass-player2").click(function(){
+    $(".player1").show();
+    $(".player2").slideUp();
+  });
+});

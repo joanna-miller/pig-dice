@@ -1,5 +1,5 @@
 .jumbotron {
-  background-image: linear-gradient(blue, purple);
+  background-image: repeating-linear-gradient(35deg,blue, purple);
   color: rgb(62, 255, 62);
   text-align: center;
 }
@@ -10,6 +10,10 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 30%;
   height: auto;
+}
+
+.player1, .player2{
+  display:none;
 }
