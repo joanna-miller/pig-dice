@@ -38,6 +38,14 @@ Expect: (player1.rollDice()).toEqual(1, 2, 3, 4, 5, or 6)
 Describe: Player.prototype.endTurn()
 Test: Record rolled value from turn to Player object.
 Expect: (player1.endTurn().toEqual(Player{playerNum:,turnScore: turn value, totalScore:,status}))
+
+Describe: Player.prototype.theScore()
+Test:
+Expect:
+
+Describe: Player.prototype.theTurnScore()
+Test: 
+Expect:
 ```
 
 ## License
