@@ -14,20 +14,20 @@ let player2 = new Player(2, [], 0, false);
 
 let rollsArray = [];
 
-function rollDice(player) {
+Player.prototype.rollDice = function() {
   let rollValue = Math.floor(Math.random() * 6) + 1
   console.log(rollValue);
   rollsArray.push(rollValue);
 };
 
-function endTurn(player) {
+Player.prototype.endTurn = function() {
   let sum = 0;
   if (rollsArray.includes(1)) {
-      player.turnScore.push(0);
+      this.turnScore.push(0);
     } else rollsArray.forEach(function(element) {
       sum += element;
     });  
-  player.turnScore.push(sum);
+  this.turnScore.push(sum);
   rollsArray = [];
 };
 
@@ -42,6 +42,7 @@ $(document).ready(function(){
   });
 
   $("#pass-player1").click(function(){
+    
     $(".player2").show();
     $(".player1").slideUp();
     });

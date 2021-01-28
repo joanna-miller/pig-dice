@@ -31,13 +31,13 @@ Describe: Player()
 Test: Store new player object within Player Constructor.
 Expect: (let player1 = new Player()).toEqual(Player{playerNum:,turnScore:,totalScore:,status:})
 
-Describe: rollDice()
+Describe: Player.prototype.rollDice()
 Test: Get random number between 1 and 6, add to an array to track turn score.
-Expect: (rollDice()).toEqual(1, 2, 3, 4, 5, or 6)
+Expect: (player1.rollDice()).toEqual(1, 2, 3, 4, 5, or 6)
 
-Describe: endTurn()
+Describe: Player.prototype.endTurn()
 Test: Record rolled value from turn to Player object.
-Expect: (endTurn().toEqual(Player{playerNum:,turnScore: turn value, totalScore:,status}))
+Expect: (player1.endTurn().toEqual(Player{playerNum:,turnScore: turn value, totalScore:,status}))
 ```
 
 ## License
