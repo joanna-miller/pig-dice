@@ -56,6 +56,6 @@ body {
   box-shadow: 10px 10px 20px 4px rgb(0, 89, 255);
   /* display: none; */
 }
-.loser {
+.result {
   display: none;
 }
