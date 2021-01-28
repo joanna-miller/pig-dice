@@ -1,10 +1,10 @@
 .jumbotron {
-  background-image: linear-gradient(35deg,blue, purple);
+  background-image: linear-gradient(35deg,blue, rgb(104, 253, 104), purple);
   color: rgb(62, 255, 62);
   text-align: center;
 }
 body {
-  background-image: linear-gradient(90deg, rgb(230, 72, 98), rgb(255, 255, 0));
+  background-image: linear-gradient(90deg, rgb(255, 72, 231), rgb(255, 255, 0));
 }
 .center {
   display: block;
