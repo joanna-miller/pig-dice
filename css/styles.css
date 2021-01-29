@@ -13,7 +13,6 @@ body {
   margin-right: auto;
   width: 180px;
   height: auto;
-  box-shadow: 12px 12px 2px 1px rgb(198, 198, 255);
 }
 
 .player1, .player2 {
@@ -43,7 +42,7 @@ display: none;
   width: 100%;
   height: auto;
   box-shadow: 0 10px 20px 0 rgb(43, 255, 0);
-  display: none;
+  display: none; 
   text-align: center;
   padding-bottom: 41%;
 }

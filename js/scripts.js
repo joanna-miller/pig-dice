@@ -104,4 +104,8 @@ $(document).ready(function(){
     player2.theTurnScore();
     $(".p2-score").text(player2.currentTurnScore);
   });
+
+  $("#newgame").click(function() {
+    location.reload();
+  });
 });
