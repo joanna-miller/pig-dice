@@ -13,11 +13,11 @@ body {
   margin-right: auto;
   width: 180px;
   height: auto;
-  blox-shadow: 12px 12px 2px 1px rgb(198, 198, 255);
+  box-shadow: 12px 12px 2px 1px rgb(198, 198, 255);
 }
 
 .player1, .player2 {
-  /* display: none; */
+display: none;
 
 }
 
@@ -33,7 +33,7 @@ body {
   border-radius: 25px;
   text-align: center;
   box-shadow: -10px 10px 20px 4px rgb(251, 255, 0);
-  /* display: none; */
+  display: none;
 }
 
 .dice-roll {
@@ -43,7 +43,7 @@ body {
   width: 100%;
   height: auto;
   box-shadow: 0 10px 20px 0 rgb(43, 255, 0);
-  /* display: none; */
+  display: none;
   text-align: center;
   padding-bottom: 41%;
 }
@@ -54,8 +54,8 @@ body {
   border-radius: 25px;
   text-align: center;
   box-shadow: 10px 10px 20px 4px rgb(0, 89, 255);
-  /* display: none; */
+  display: none;
 }
-.result {
+#argh {
   display: none;
 }

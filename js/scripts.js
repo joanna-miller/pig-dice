@@ -44,7 +44,14 @@ Player.prototype.theTurnScore = function() {
     sum += element;
   });
   this.currentTurnScore = sum;
-}
+};
+Player.prototype.loserSucks = function() {
+  if (this.totalScore >= 100) {
+    $("#argh").show();
+    $("#game-grid").hide();
+    $("#loser").text(this.playerNum);
+  };
+};
 // User Interface Logic
 $(document).ready(function(){
   $("#play").click(function(){
@@ -62,6 +69,7 @@ $(document).ready(function(){
     $(".p1-total").text(player1.totalScore);
     $("#roll-player2").show();
     $(".p1-score").text(player1.currentTurnScore);
+    player1.loserSucks();
     });
 
   $("#pass-player2").click(function(){
@@ -72,6 +80,7 @@ $(document).ready(function(){
     $(".p2-total").text(player2.totalScore); 
     $("#roll-player1").show();
     $(".p2-score").text(player2.currentTurnScore);
+    player2.loserSucks();
   });
 
   $("#roll-player1").click(function(){
