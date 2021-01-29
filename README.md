@@ -20,6 +20,10 @@ _A two player game in which a player rolls a single die repeatedly until either 
 * _Navigate to top level of the directory_
 * _Open index.html in your browser_
 
+### Or
+
+[Click here!](https://joanna-miller.github.io/pig-dice/)
+
 ## Known Bugs
 
 * _Any known issues_
