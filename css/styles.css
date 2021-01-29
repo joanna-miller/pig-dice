@@ -7,17 +7,25 @@ body {
   background-image: linear-gradient(90deg, rgb(255, 72, 231), rgb(255, 255, 0));
   margin-bottom: 100px;
 }
+
 .center {
-  display: block;
+  display: block; 
   margin-left: auto;
   margin-right: auto;
   width: 180px;
   height: auto;
 }
 
-.player1, .player2 {
-display: none;
+h3, h2 {
+  margin-top: 20px;
+  color: purple;
+}
 
+p {
+  color: purple;
+}
+.player1, .player2 {
+ display: none; 
 }
 
 #game-grid {
@@ -32,7 +40,7 @@ display: none;
   border-radius: 25px;
   text-align: center;
   box-shadow: -10px 10px 20px 4px rgb(251, 255, 0);
-  display: none;
+  display: none; 
 }
 
 .dice-roll {
@@ -45,6 +53,7 @@ display: none;
   display: none; 
   text-align: center;
   padding-bottom: 41%;
+  color: yellow;
 }
 
 .scoreboard {
@@ -53,8 +62,22 @@ display: none;
   border-radius: 25px;
   text-align: center;
   box-shadow: 10px 10px 20px 4px rgb(0, 89, 255);
-  display: none;
+  display: none; 
 }
+
+.scoreboard-title {
+  margin-top: 30px;
+}
+.total-score {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+#pig-winner {
+  float: right;
+}
+
 #argh {
-  display: none;
+ display: none;
+padding-top: 150px;
 }
