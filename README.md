@@ -44,12 +44,14 @@ Test: Record rolled value from turn to Player object.
 Expect: (player1.endTurn().toEqual(Player{playerNum:,turnScore: turn value, totalScore:,status}))
 
 Describe: Player.prototype.theScore()
-Test:
-Expect:
+let player1 = new Player(1, 0, 0, [2, 4], 10, false);
+Test: Record players total score for the game.
+Expect: (player1.theScore().toEqual(Player{playerNum:,turnScore: turn value, totalScore: 16,status:}))
 
 Describe: Player.prototype.theTurnScore()
-Test: 
-Expect:
+let player1 = new Player(1, 0, 4, [], 10, false);
+Test: Hold players roll values in an turn score array.
+Expect: (player1.theTurnScore().toEqual(Player{playerNum:,turnScore: [4] turn value, totalScore:,status:}))
 ```
 
 ## License
